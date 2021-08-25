@@ -8,7 +8,7 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <title>Bruno Michaelis - Contact</title>
+    <title>Bruno Michaelis - Projects</title>
 </head>
 
 <body>
@@ -47,8 +47,8 @@
                 <ul>
                     <li><a href="/src/public/index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="/src/public/projects.html">Projects</a></li>
-                    <li><a href="/src/public/contact.html" class="current">Contact</a></li>
+                    <li><a href="/src/public/projects.html" class="current">Projects</a></li>
+                    <li><a href="/src/public/contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-icon-menu">
@@ -56,31 +56,44 @@
             </div>
         </div>
     </header>
-    <section class="contact-me">
-        <div class="boxes">
-            <div class="box contact-info">
-                <h2 class="contact--subheader">CONTACT</h2>
-                <h1 class="contact--headline">Let's talk about<br>your next project</h1>
-                <p>Fill out the form below and I will be in touch with you to discuss your project.</p>
-                <p><strong>if you prefer, send me an email to<br>bruno.micka@gmail.com or<br> call
-                    to +1 (431) 688-5995</strong></p>
+    <div class="hero">
+        <div class="social">
+            <span>
+                <a href="https://www.linkedin.com/in/bruno-michaelis" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </span>
+            <span>
+                <a href="https://www.instagram.com/bruno_micka/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </span>
+            <span>
+                <a href="https://www.facebook.com/bruno.michaelis" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </span>
+        </div>
+        <section class="container banner">
+            <div class="boxes">
+                <div class="box-container">
+                    <h2>Projects and Technologies</h2>
+                    <p>Learn about the some of the projects that I have developed throughout my career.</p>
+                </div>
+                <div class="box-container">
+                    <img src="/src/images/Ideas-Single-signon-300x300.png" alt="Icons around man" width="350px"/>
+                </div>
             </div>
-            <div class="box box-form">
-                <form>
-                    <div class="form-control">
-                        <input type="text" id="name" required autocomplete="off">
-                        <label>Full Name*</label>
-                    </div>
-                    <div class="form-control">
-                        <input type="text" id="email" required autocomplete="off">
-                        <label>Email*</label>
-                    </div>
-                    <div class="form-control">
-                        <textarea name="message" id="message" cols="30" rows="2" required autocomplete="off"></textarea>
-                        <label class="textarea-label">How can I help you?*</label>
-                    </div>
-                    <button class="button transparent">Submit</button>
-                </form>
+        </section>
+    </div>
+    <section class="container learning">
+        <div class="boxes">
+            <div class="box-container">
+                <img src="/src/images/PinClipart.com_development-clipart_1136424.png" alt="Presentation" width="500px"/>
+            </div>
+            <div class="box-container">
+                <h2>Lunch and Learns</h2>
+                <p>Initiatives like <strong>lunch and learns</strong> are an interesting way to share knowledge and bring new technologies to your team.</p>
             </div>
         </div>
     </section>
@@ -92,14 +105,6 @@
     const btnMobileMenu = document.querySelector('.header-icon-menu')
     const btnMobileClose = document.querySelector('.menu-close')
     const mobileMenu = document.querySelector('.menu')
-    const labels = document.querySelectorAll('.form-control label');
-
-    labels.forEach((label) => {
-        label.innerHTML = label.innerText
-            .split('')
-            .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
-            .join('')
-    })
 
     btnMobileMenu.addEventListener('click', () => {
         mobileMenu.classList.add('active')
