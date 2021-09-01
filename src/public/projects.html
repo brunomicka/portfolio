@@ -16,10 +16,10 @@
         <span class="menu-close"></span>
         <nav class="menu-nav">
             <ul>
-                <li class="menu-item"><a class="menu-item-link" href="/src/public/">home</a></li>
+                <li class="menu-item"><a class="menu-item-link" href="/public/">home</a></li>
                 <li class="menu-item"><a class="menu-item-link" href="/about">about</a></li>
-                <li class="menu-item"><a class="menu-item-link" href="/src/public/projects.html">projects</a></li>
-                <li class="menu-item"><a class="menu-item-link" href="/src/public/contact.html">contact</a></li>
+                <li class="menu-item"><a class="menu-item-link" href="/public/projects.html">projects</a></li>
+                <li class="menu-item"><a class="menu-item-link" href="/public/contact.html">contact</a></li>
             </ul>
         </nav>
         <div class="menu-social">
@@ -45,10 +45,10 @@
             <h1 class="logo"><a href="/index.html">bruno michaelis</a></h1>
             <nav class="nav">
                 <ul>
-                    <li><a href="/src/public/index.html">Home</a></li>
+                    <li><a href="/public/index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="/src/public/projects.html" class="current">Projects</a></li>
-                    <li><a href="/src/public/contact.html">Contact</a></li>
+                    <li><a href="/public/projects.html" class="current">Projects</a></li>
+                    <li><a href="/public/contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-icon-menu">
@@ -81,7 +81,7 @@
                     <p>Learn about the some of the projects that I have developed throughout my career.</p>
                 </div>
                 <div class="box-container">
-                    <img src="/src/images/Ideas-Single-signon-300x300.png" alt="Icons around man" width="350px"/>
+                    <img src="/images/Ideas-Single-signon-300x300.png" alt="Icons around man" width="300px" />
                 </div>
             </div>
         </section>
@@ -89,18 +89,45 @@
     <section class="container learning">
         <div class="boxes">
             <div class="box-container">
-                <img src="/src/images/PinClipart.com_development-clipart_1136424.png" alt="Presentation" width="500px"/>
+                <img src="/images/PinClipart.com_development-clipart_1136424.png" alt="Presentation" width="500px" />
             </div>
             <div class="box-container">
                 <h2>Lunch and Learns</h2>
-                <p>Initiatives like <strong>lunch and learns</strong> are an interesting way to share knowledge and bring new technologies to your team.</p>
+                <p>Initiatives like <strong>lunch and learns</strong> are an interesting way to share knowledge and
+                    bring new technologies to your team.</p>
             </div>
         </div>
     </section>
+    <div class="project-wrapper">
+        <section class="container">
+            <div class="boxes">
+                <div class="box-container">
+                    <h2>Rent a Room</h2>
+                    <p>Initiatives like <strong>lunch and learns</strong> are an interesting way to share knowledge and
+                        bring new technologies to your team.</p>
+                </div>
+                <div class="box-container">
+                    <div class="carousel">
+                        <div class="image-container" id="imgs">
+                            <img src="/images/test-image.png" alt="first-image" />
+                            <img src="/images/test-image.png" alt="second-image" />
+                            <img src="/images/test-image.png" alt="third-image" />
+                            <img src="/images/test-image.png" alt="fourth-image" />
+                        </div>
+                        <div class="buttons-container">
+                            <button id="left" class="btn"><span aria-label="Previous"><</span></button>
+                            <button id="right" class="btn"><span aria-label="Next">></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
 
+<script src="../scripts/carousel.js"></script>
 <script>
     const btnMobileMenu = document.querySelector('.header-icon-menu')
     const btnMobileClose = document.querySelector('.menu-close')
