@@ -10,7 +10,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  padding-bottom: 50px;
   margin: 0 auto;
 }
 
@@ -323,6 +322,7 @@ body {
   text-align: center;
   position: relative;
   height: 45vh;
+  max-height: 475px;
   width: 100%;
 }
 
@@ -725,6 +725,7 @@ body {
   width: 700px;
   height: 530px;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 1229px) {
@@ -732,6 +733,46 @@ body {
     width: 300px;
     height: 265px;
   }
+}
+
+.container .boxes .carousel .carousel-dots {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(48, 48, 51, 0.7);
+  width: 100%;
+}
+
+.container .boxes .carousel .carousel-dots ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  margin: 0;
+}
+
+.container .boxes .carousel .carousel-dots ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.container .boxes .carousel .carousel-dots ul li button {
+  background-color: #F3F4F9;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 
 .container .boxes .carousel .image-container {
@@ -748,7 +789,7 @@ body {
 
 .container .boxes .carousel .image-container img {
   width: 700px;
-  height: 500px;
+  height: 530px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -760,31 +801,40 @@ body {
   }
 }
 
-.container .boxes .carousel .buttons-container {
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container .boxes .carousel .arrow {
+  position: absolute;
+  top: 50%;
 }
 
-.container .boxes .carousel .btn {
-  background-color: #4B4FA1;
-  color: #fff;
+.container .boxes .carousel .arrow.previous {
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .boxes .carousel .arrow.next {
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .boxes .carousel .arrow .btn {
+  background-color: rgba(75, 79, 161, 0.5);
   border: none;
+  border-radius: 50%;
+  color: #fff;
   cursor: pointer;
   font-family: inherit;
-  font-size: 1.4rem;
-  padding: 0.8rem;
-  width: 49.9%;
+  font-size: 2rem;
+  height: 30px;
+  width: 30px;
 }
 
-.container .boxes .carousel .btn:hover {
-  opacity: 0.9;
+.container .boxes .carousel .arrow .btn:hover {
+  background-color: #4B4FA1;
 }
 
-.container .boxes .carousel .btn:focus {
+.container .boxes .carousel .arrow .btn:focus {
   outline: none;
 }
 
@@ -967,13 +1017,13 @@ body {
 }
 
 .item-check::after {
-  content: '';
+  content: "";
   height: 10px;
   position: absolute;
   -webkit-transform: scaleX(-1) rotate(135deg);
           transform: scaleX(-1) rotate(135deg);
   width: 6px;
-  border-right: 2px solid #FE4400;
-  border-top: 2px solid #FE4400;
+  border-right: 2px solid #fe4400;
+  border-top: 2px solid #fe4400;
 }
 /*# sourceMappingURL=styles.css.map */
