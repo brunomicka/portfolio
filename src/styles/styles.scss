@@ -49,7 +49,7 @@
 
         .carousel {
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
+            border-radius: 15px;
             width: 700px;
             height: 530px;
             overflow: hidden;
@@ -63,7 +63,7 @@
             .carousel-dots {
                 position: absolute;
                 bottom: 0;
-                background-color: rgba(48, 48, 51,0.7);
+                background-color: rgba(48, 48, 51, 0.7);
                 width: 100%;
 
                 ul {
@@ -81,6 +81,11 @@
                         margin: 0 5px;
                         padding: 0;
 
+                        &.small {
+                            height: 0.7rem;
+                            width: 0.7rem;
+                        }
+
                         button {
                             background-color: $white;
                             border-radius: 50%;
@@ -88,6 +93,10 @@
                             outline: none;
                             height: 1.3rem;
                             width: 1.3rem;
+
+                            &.active {
+                                background-color: $orange;
+                            }
                         }
                     }
                 }
@@ -113,7 +122,10 @@
             .arrow {
                 position: absolute;
                 top: 50%;
-                
+                display: none;
+                margin: .5rem;
+               
+
                 &.previous {
                     left: 0;
                     transform: translateY(-50%);
@@ -124,22 +136,27 @@
                     transform: translateY(-50%);
                 }
 
+                &.show {
+                    display: block;
+                }
+
                 .btn {
-                    background-color: $blue_02;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                    background-color: $orange_opacity;
                     border: none;
                     border-radius: 50%;
                     color: #fff;
                     cursor: pointer;
                     font-family: inherit;
                     font-size: 2rem;
-                    height: 30px;
-                    width: 30px;
+                    height: 5rem;
+                    width: 5rem;
                 }
-    
+
                 .btn:hover {
-                    background-color: $blue;
+                    background-color: $orange;
                 }
-    
+
                 .btn:focus {
                     outline: none;
                 }

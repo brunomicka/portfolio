@@ -721,7 +721,7 @@ body {
 .container .boxes .carousel {
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 15px;
   width: 700px;
   height: 530px;
   overflow: hidden;
@@ -766,6 +766,11 @@ body {
   padding: 0;
 }
 
+.container .boxes .carousel .carousel-dots ul li.small {
+  height: 0.7rem;
+  width: 0.7rem;
+}
+
 .container .boxes .carousel .carousel-dots ul li button {
   background-color: #F3F4F9;
   border-radius: 50%;
@@ -773,6 +778,10 @@ body {
   outline: none;
   height: 1.3rem;
   width: 1.3rem;
+}
+
+.container .boxes .carousel .carousel-dots ul li button.active {
+  background-color: #FE4400;
 }
 
 .container .boxes .carousel .image-container {
@@ -804,6 +813,8 @@ body {
 .container .boxes .carousel .arrow {
   position: absolute;
   top: 50%;
+  display: none;
+  margin: .5rem;
 }
 
 .container .boxes .carousel .arrow.previous {
@@ -818,20 +829,26 @@ body {
           transform: translateY(-50%);
 }
 
+.container .boxes .carousel .arrow.show {
+  display: block;
+}
+
 .container .boxes .carousel .arrow .btn {
-  background-color: rgba(75, 79, 161, 0.5);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(254, 68, 0, 0.5);
   border: none;
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
   font-size: 2rem;
-  height: 30px;
-  width: 30px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .container .boxes .carousel .arrow .btn:hover {
-  background-color: #4B4FA1;
+  background-color: #FE4400;
 }
 
 .container .boxes .carousel .arrow .btn:focus {
