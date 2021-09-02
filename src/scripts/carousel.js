@@ -36,7 +36,7 @@ carousel.addEventListener('mouseout', () => {
 });
 
 let interval = setInterval(() => {
-    run()
+    // run()
 }, (2000));
 
 leftBtn.addEventListener('click', () => {
@@ -71,7 +71,7 @@ function changeImage(i) {
 
     nextLi.firstElementChild.classList.add('active')
 
-    carouselImg.style.transform = `translateX(-${idx * 700}px)`
+    carouselImg.style.transform = `translateX(-${idx * carousel.offsetWidth}px)`
 }
 
 function clearActiveDots() {
