@@ -24,6 +24,7 @@
 
         .box-container {
             width: 40%;
+            
 
             @media (max-width: $menu-breakingpoint) {
                 width: 100%;
@@ -295,6 +296,9 @@
     &.learning {
         .boxes {
             .box-container {
+                @media (max-width: $menu-breakingpoint) {
+                   align-items: center;
+                }
                 img {
                     @media (max-width: $menu-breakingpoint) {
                         width: 300px;
@@ -309,6 +313,17 @@
     background-color: $gray;
     color: $white;
     width: 100%;
+
+    &.bg-white {
+        background-color: $white;
+        color: $text;
+    }
+    
+    .box-container {
+        @media (max-width: $menu-breakingpoint) {
+           align-items: center;
+        }
+    }
 
     &.bg-technology {
         background-image: url("/images/tech-background.png");
