@@ -7,7 +7,7 @@ carousels.forEach((carousel, i) => {
     const dotsUl = carousel.querySelector(".carousel-dots ul")
     const leftBtn = carousel.querySelector('.previous button')
     const rightBtn = carousel.querySelector('.next button')
-    
+
     carouselsObj.push({
         carousel,
         idx: 0
@@ -96,3 +96,12 @@ const resetInterval = (carouselObj) => {
     clearInterval(carouselObj.interval)
     carouselObj.interval = setInterval(run(carouselObj), 2000);
 }
+
+window.addEventListener("resize", () => {
+    carousels.forEach((carousel)=> {
+        const imgs = carousel.querySelectorAll('.imgs img')
+        imgs.forEach((img) => {
+            img.width = carousel.offsetWidth;
+        })
+    })
+}, false);

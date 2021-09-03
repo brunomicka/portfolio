@@ -73,6 +73,11 @@
                     <i class="fab fa-facebook-f"></i>
                 </a>
             </span>
+            <span>
+                <a href="https://github.com/brunomicka" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </span>
         </div>
         <div class="container">
             <h1>Welcome to my Website</h1>
@@ -123,7 +128,7 @@
                         <br>
                         same quality
                     </h1>
-                    <button class="button orange">Check out my Projects <i class="fas fa-arrow-right"></i></button>
+                    <button class="button orange" id="btnProjects">Check out my Projects <i class="fas fa-arrow-right"></i></button>
                 </div>
                 <div class="box-container">
                     <h3 class="text-white">technologies</h3>
@@ -216,6 +221,7 @@
     const btnMobileMenu = document.querySelector('.header-icon-menu')
     const btnMobileClose = document.querySelector('.menu-close')
     const mobileMenu = document.querySelector('.menu')
+    const projectsBtn = document.getElementById('btnProjects')
 
     btnMobileMenu.addEventListener('click', () => {
         mobileMenu.classList.add('active')
@@ -223,5 +229,10 @@
 
     btnMobileClose.addEventListener('click', () => {
         mobileMenu.classList.remove('active')
+    })
+
+    projectsBtn.addEventListener('click', () =>
+    {
+        window.open('/public/projects.html','_self')
     })
 </script>

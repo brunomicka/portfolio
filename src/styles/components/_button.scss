@@ -63,4 +63,18 @@
             width: 100%;
         }
     }
+
+    &.white {
+        background: $light-white;
+        color: $blue;
+        font-size: $font-size-medium;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        @media(max-width: $menu-breakingpoint) {
+            width: 100%;
+        }
+    }
 }

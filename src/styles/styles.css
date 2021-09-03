@@ -97,6 +97,22 @@ body {
   }
 }
 
+.button.white {
+  background: #E5E5E5;
+  color: #4B4FA1;
+  font-size: 2.2rem;
+}
+
+.button.white:hover {
+  background-color: #F3F4F9;
+}
+
+@media (max-width: 1229px) {
+  .button.white {
+    width: 100%;
+  }
+}
+
 .header {
   left: 0;
   padding: 30px 0;
@@ -1028,6 +1044,11 @@ body {
   }
 }
 
+.container.github {
+  background-color: #4B4FA1;
+  color: #F3F4F9;
+}
+
 .project-wrapper {
   background-color: #303033;
   color: #F3F4F9;
@@ -1053,6 +1074,50 @@ body {
   background-size: cover;
 }
 
+.item-check-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .item-check-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 10%;
+  }
+}
+
+.item-check-wrapper ul {
+  margin: 5px;
+}
+
+@media (max-width: 1229px) {
+  .item-check-wrapper ul {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-check-wrapper ul:last-child {
+    margin-bottom: 20px;
+  }
+}
+
 .item-check {
   display: inline-block;
   height: 12px;
@@ -1070,5 +1135,54 @@ body {
   width: 6px;
   border-right: 2px solid #fe4400;
   border-top: 2px solid #fe4400;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper.bg-white {
+  background-color: #F3F4F9;
+}
+
+.wrapper.bg-blue {
+  background-color: #4B4FA1;
+}
+
+.quote {
+  background-color: #F3F4F9;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  color: #303033;
+  width: 100%;
+  padding: 100px;
+}
+
+@media (max-width: 480px) {
+  .quote {
+    padding: 40px;
+  }
+}
+
+.quote p {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  line-height: 2.5rem;
+}
+
+.quote p strong {
+  color: #4B4FA1;
+}
+
+.quote p.author {
+  text-align: right;
+  font-style: italic;
+}
+
+.quote p.author small {
+  font-size: 1.6rem;
+  text-align: right;
 }
 /*# sourceMappingURL=styles.css.map */
