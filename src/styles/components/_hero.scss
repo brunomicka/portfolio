@@ -37,36 +37,4 @@
     @media (max-width: $menu-breakingpoint) {
         padding: 13rem 0 8rem;
     }
- 
-    .social {
-        align-items: center;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        font-size: $font-size-medium;
-        justify-content: center;
-        margin: 0 2rem 0 1.5rem;
-        position: absolute;
-        right: 0;
-
-        @media(max-width: $menu-breakingpoint) {
-            display: none;
-        }
-
-        span {
-            margin: 0.8rem 0;
-
-            a {
-                cursor: pointer;
-                color: $white;
-                text-decoration: none;
-                transition: color 400ms ease;
-
-                &.current,
-                &:hover {
-                    color: $orange;
-                }
-            }
-        }
-    }
 }

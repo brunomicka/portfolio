@@ -298,6 +298,7 @@
                 @media (max-width: $menu-breakingpoint) {
                     align-items: center;
                 }
+
                 img {
                     @media (max-width: $menu-breakingpoint) {
                         width: 300px;
@@ -311,6 +312,68 @@
         background-color: $blue;
         color: $white;
     }
+
+    &.about-me-timeline {
+        .boxes {
+            flex-direction: column;
+
+            @media (max-width: $menu-breakingpoint) {
+                width: 100%;
+                margin:0;
+            }
+
+            .box-container {
+                margin: 2rem;
+                padding: 2rem;
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                @media (max-width: $menu-breakingpoint) {
+                    flex-direction: column;
+                }
+                .info {
+                    animation: float 5s ease-in-out infinite;
+                    background-color: $white;
+                    border-radius: 2rem;
+                    box-shadow: 20px 20px $text;
+                    color: $text;
+                    padding: 2rem;
+                    position: relative;
+                    width: 75%;
+
+                    &.right{
+
+                        &::after{
+                            right: 0;
+                        }
+                    }
+
+                    &::after {
+                        transform: translatey(0px);
+                        content: ".";
+                        font-weight: bold;
+                        animation: float2 5s ease-in-out infinite;
+                        -webkit-text-fill-color: $white;
+                        text-shadow: 22px 22px $text;
+                        text-align: left;
+                        font-size: 55px;
+                        width: 55px;
+                        height: 11px;
+                        line-height: 30px;
+                        border-radius: 11px;
+                        background-color: $white;
+                        position: absolute;
+                        display: block;
+                        bottom: -30px;
+                        box-shadow: 22px 22px $text;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .project-wrapper {
@@ -321,6 +384,10 @@
     &.bg-white {
         background-color: $white;
         color: $text;
+    }
+
+    &.bg-blue {
+        background-color: $blue;
     }
 
     .box-container {
@@ -405,24 +472,124 @@
     @media (max-width: $mobile-breakingpoint) {
         padding: 40px;
     }
-    
+
     p {
         font-size: $font-size-medium;
         font-weight: 400;
         letter-spacing: 0.5rem;
         line-height: 2.5rem;
 
-        strong{
+        strong {
             color: $blue;
         }
 
-        &.author{
+        &.author {
             text-align: right;
             font-style: italic;
-            small{
+
+            small {
                 font-size: $font-size-small;
                 text-align: right;
             }
         }
     }
 }
+
+.circle {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 0.5rem solid;
+    display: flex;
+    padding: 6rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $menu-breakingpoint) {
+        margin: 3rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-size: $font-size-large;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+    }
+
+    &.white {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+            background-color: $blue_01;
+        }
+    }
+}
+
+.social {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-medium;
+    justify-content: center;
+    margin: 0 2rem 0 1.5rem;
+    position: absolute;
+    right: 0;
+    height: 25vh;
+    z-index: 999999;
+
+    @media(max-width: $menu-breakingpoint) {
+        display: none;
+    }
+
+    span {
+        margin: 0.8rem 0;
+
+        a {
+            cursor: pointer;
+            color: $white;
+            text-decoration: none;
+            transition: color 400ms ease;
+
+            &.current,
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  @keyframes float2 {
+    0% {
+      line-height: 30px;
+      transform: translatey(0px);
+    }
+    55% {
+      transform: translatey(-10px);
+    }
+    60% {
+      line-height: 15px;
+    }
+    100% {
+      line-height: 30px;
+      transform: translatey(0px);
+    }
+  }
+  
