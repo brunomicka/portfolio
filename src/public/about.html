@@ -9,7 +9,7 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-    <title>Bruno Michaelis - Projects</title>
+    <title>Bruno Michaelis - About me</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
                 <ul>
                     <li><a href="/public/index.html">Home</a></li>
                     <li><a href="/public/about.html" class="current">About</a></li>
-                    <li><a href="/public/projects.html" >Projects</a></li>
+                    <li><a href="/public/projects.html">Projects</a></li>
                     <li><a href="/public/contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -89,14 +89,17 @@
         <section class="container about-me-timeline">
             <div class="boxes">
                 <div class="box-container animated fadeInUp delay-05s">
-                    <h2>about me: Bruno Michaelis</h2>
+                    <h2>about me</h2>
                 </div>
                 <div class="box-container animated fadeInUp delay-1s">
                     <div class="circle white">
                         <p>2011</p>
+                        <span class="date-range">
+                            10/2012  - 01/2015
+                        </span>
                     </div>
                     <div class="info">
-                        <h2>Internship</h2>
+                        <h2>Full-Stack Developer - Senior</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repudiandae laborum
                             temporibus provident omnis tempora optio dolorum exercitationem vero recusandae odio quod
                             delectus unde eum doloremque, velit id quas? Adipisci!
@@ -106,17 +109,20 @@
                             Esse laudantium animi quae, optio sapiente temporibus vitae eveniet possimus architecto
                             distinctio nihil officiis ipsum, molestiae, sit necessitatibus ea reprehenderit odio
                             tempora! Ad dignissimos consectetur error officiis odio, veniam dolor.</p>
-                            <div class="year">
-                                2012
-                            </div>
+                        <div class="year">
+                            2010 - 2012
+                        </div>
                     </div>
                 </div>
                 <div class="box-container animated fadeInUp delay-2s">
                     <div class="circle white">
                         <p>2012</p>
+                        <span class="date-range">
+                            10/2012  - 01/2015
+                        </span>
                     </div>
                     <div class="info">
-                        <h2>Internship</h2>
+                        <h2>Software Engineer - Senior</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repudiandae laborum
                             temporibus provident omnis tempora optio dolorum exercitationem vero recusandae odio quod
                             delectus unde eum doloremque, velit id quas? Adipisci!
@@ -126,14 +132,20 @@
                             Esse laudantium animi quae, optio sapiente temporibus vitae eveniet possimus architecto
                             distinctio nihil officiis ipsum, molestiae, sit necessitatibus ea reprehenderit odio
                             tempora! Ad dignissimos consectetur error officiis odio, veniam dolor.</p>
+                        <div class="year">
+                            02/2012 - 12/2012
+                        </div>
                     </div>
                 </div>
                 <div class="box-container animated fadeInUp delay-3s">
                     <div class="circle white">
                         <p>2013</p>
+                        <span class="date-range">
+                            10/2012  - 01/2015
+                        </span>
                     </div>
                     <div class="info">
-                        <h2>Internship</h2>
+                        <h2>Engineering Manager</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repudiandae laborum
                             temporibus provident omnis tempora optio dolorum exercitationem vero recusandae odio quod
                             delectus unde eum doloremque, velit id quas? Adipisci!
@@ -143,16 +155,24 @@
                             Esse laudantium animi quae, optio sapiente temporibus vitae eveniet possimus architecto
                             distinctio nihil officiis ipsum, molestiae, sit necessitatibus ea reprehenderit odio
                             tempora! Ad dignissimos consectetur error officiis odio, veniam dolor.</p>
+
+                        <div class="year">
+                            02/2012 - 12/2012
+                        </div>
                     </div>
                 </div>
                 <div class="box-container animated fadeInUp delay-4s">
                     <div class="circle white">
                         <p>2014</p>
+                        <span class="date-range">
+                            10/2012  - 01/2015
+                        </span>
                     </div>
                     <div class="info">
                         <h2>Internship</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque repudiandae laborum
-                            temporibus provident omnis tempora optio dolorum exercitationem vero recusandae odio quod
+                            temporibus provident omnis tempora optio dolorum exercitationem vero recusandae odio
+                            quod
                             delectus unde eum doloremque, velit id quas? Adipisci!
                             Tempora architecto dolor amet nobis deleniti, nisi repellat. Facilis voluptates ad sunt
                             doloribus itaque quam, possimus harum animi, corrupti voluptate iusto. Laborum incidunt
@@ -160,6 +180,9 @@
                             Esse laudantium animi quae, optio sapiente temporibus vitae eveniet possimus architecto
                             distinctio nihil officiis ipsum, molestiae, sit necessitatibus ea reprehenderit odio
                             tempora! Ad dignissimos consectetur error officiis odio, veniam dolor.</p>
+                        <div class="year">
+                            02/2012 - 12/2012
+                        </div>
                     </div>
                 </div>
             </div>
@@ -169,22 +192,4 @@
 
 </html>
 
-<script src="../scripts/carousel.js"></script>
-<script>
-    const btnMobileMenu = document.querySelector('.header-icon-menu')
-    const btnMobileClose = document.querySelector('.menu-close')
-    const mobileMenu = document.querySelector('.menu')
-    const githubBtn = document.getElementById('btnGithub')
-
-    btnMobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.add('active')
-    })
-
-    btnMobileClose.addEventListener('click', () => {
-        mobileMenu.classList.remove('active')
-    })
-
-    githubBtn.addEventListener('click', () => {
-        window.open('https://github.com/brunomicka', '_blank')
-    })
-</script>
+<script src="/scripts/menu.js"></script>

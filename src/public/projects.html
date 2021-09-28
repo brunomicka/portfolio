@@ -245,20 +245,10 @@
 
 </html>
 
-<script src="../scripts/carousel.js"></script>
+<script src="/scripts/carousel.js"></script>
+<script src="/scripts/menu.js"></script>
 <script>
-    const btnMobileMenu = document.querySelector('.header-icon-menu')
-    const btnMobileClose = document.querySelector('.menu-close')
-    const mobileMenu = document.querySelector('.menu')
     const githubBtn = document.getElementById('btnGithub')
-
-    btnMobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.add('active')
-    })
-
-    btnMobileClose.addEventListener('click', () => {
-        mobileMenu.classList.remove('active')
-    })
 
     githubBtn.addEventListener('click', () => {
         window.open('https://github.com/brunomicka', '_blank')

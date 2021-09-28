@@ -5,6 +5,7 @@
 @import "./components/hero";
 @import "./components/certifications";
 @import "./components/contact";
+@import "./components/timeline";
 
 .container {
     padding: 70px 0;
@@ -239,26 +240,14 @@
     }
 
     &.timeline {
-        background-color: $blue;
-        color: $white;
         width: 100%;
 
-        .timeline--title,
-        .timeline--subtitle {
-            width: 80%;
-            margin: 0 10%;
-        }
+        .boxes {
+            flex-direction: column;
 
-        h1 {
-            font-size: $font-size-large;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: $font-size-medium;
-            text-transform: uppercase;
-            text-align: left;
-            color: $white;
+            .box-container {
+                width: 100%;
+            }
         }
     }
 
@@ -338,7 +327,7 @@
                 align-items: center;
                 position: relative;
 
-                h2{
+                h2 {
                     @media (max-width: $menu-breakingpoint) {
                         font-size: 2rem;
                     }
@@ -411,14 +400,14 @@
 
                     h2 {
                         @media (max-width: $menu-breakingpoint) {
-                            font-size: 1.6rem;
+                            font-size: $font-size-medium;
                         }
                     }
 
                     p {
                         @media (max-width: $menu-breakingpoint) {
                             width: 85%;
-                            font-size: 1.2rem;
+                            font-size: $font-size-small;
                             line-height: normal;
                             width: 100%;
                             text-align: justify;
@@ -435,12 +424,12 @@
                         text-align: center;
                         font-weight: 700;
                         width: 100%;
-                        
+
                         @media (max-width: $menu-breakingpoint) {
                             display: block;
                         }
                     }
-                }                
+                }
             }
         }
     }
@@ -614,6 +603,19 @@
 
     &:hover {
         cursor: pointer;
+
+        p {
+            display: none;
+        }
+
+        .date-range {
+            display: block;
+            font-size: $font-size-medium;
+        }
+    }
+
+    .date-range {
+        display: none;
     }
 
     p {

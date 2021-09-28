@@ -1,6 +1,7 @@
 .contact-me {
     overflow: hidden;
     background: $blue;
+    height: 100vh;
 
     .boxes {
         display: flex;
@@ -17,10 +18,14 @@
 
         @media(max-width: $menu-breakingpoint) {
             flex-direction: column;
-            height: unset;
-            ;
+            height: 100%;
         }
 
+        @media(max-width: $mobile-breakingpoint) {
+            padding-top: 200px;
+            overflow: auto;
+        }
+        
         .box {
             width: 50%;
             color: $white;
@@ -40,6 +45,7 @@
 
                 p {
                     letter-spacing: 0.2rem;
+                    font-size: $font-size-small;
                 }
 
                 .contact--subheader {

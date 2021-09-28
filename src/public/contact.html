@@ -88,10 +88,8 @@
 
 </html>
 
+<script src="/scripts/menu.js"></script>
 <script>
-    const btnMobileMenu = document.querySelector('.header-icon-menu')
-    const btnMobileClose = document.querySelector('.menu-close')
-    const mobileMenu = document.querySelector('.menu')
     const labels = document.querySelectorAll('.form-control label');
 
     labels.forEach((label) => {
@@ -99,13 +97,5 @@
             .split('')
             .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
             .join('')
-    })
-
-    btnMobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.add('active')
-    })
-
-    btnMobileClose.addEventListener('click', () => {
-        mobileMenu.classList.remove('active')
     })
 </script>
