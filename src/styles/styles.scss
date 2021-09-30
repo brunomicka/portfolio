@@ -43,16 +43,37 @@
 
             p{
                 text-align: left;
+                width: 100%;
 
-                @media (max-width: $menu-breakingpoint) {
+                @media (max-width: $mobile-breakingpoint) {
                     text-align: justify;
+                }
+            }
+
+            .circle
+            {
+                p {
+                    width: auto;
                 }
             }
 
             ul {
                 list-style: none;
                 word-wrap: break-word;
-                font-size: $font-size-medium;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                
+                @media (max-width: $menu-breakingpoint) {
+                    font-size: $font-size-small;
+                }
+
+                @media (max-width: $mobile-breakingpoint) {
+                    font-size: $font-size-small;
+                }
+
+                &.project-features{
+                    list-style: circle;
+                }
             }
         }
 
@@ -180,6 +201,10 @@
         font-size: $font-size-small;
         line-height: 30px;
         letter-spacing: 0.1rem;
+
+        @media (max-width: $mobile-breakingpoint) {
+            line-height: normal;
+        }
     }
 
     h2,
@@ -502,7 +527,8 @@
         @media (max-width: $mobile-breakingpoint) {
             margin-bottom: 20px;
             width: 100%;
-
+            padding:0;
+            
             &:first-child {
                 margin-bottom: 0;
             }
@@ -649,6 +675,7 @@
         font-size: $font-size-large;
         font-weight: 700;
         letter-spacing: 0.3rem;
+        width: auto;
     }
 
     &.white {
@@ -712,3 +739,4 @@
         left: 100%;
     }
 }
+
