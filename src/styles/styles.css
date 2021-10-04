@@ -1328,6 +1328,12 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .container.about-me-timeline .boxes .box-container p {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 1229px) {
   .container.about-me-timeline .boxes .box-container {
     -webkit-box-orient: vertical;
@@ -1411,6 +1417,19 @@ body {
 }
 
 @media (max-width: 1229px) {
+  .container.about-me-timeline .boxes .box-container .info .read-more-btn {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container.about-me-timeline .boxes .box-container .info .read-more-btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1229px) {
   .container.about-me-timeline .boxes .box-container .info .read-more {
     width: 100%;
   }
@@ -1418,13 +1437,19 @@ body {
 
 @media (max-width: 1229px) {
   .container.about-me-timeline .boxes .box-container .info {
-    width: 85%;
+    width: 95%;
   }
 }
 
 @media (max-width: 1229px) {
   .container.about-me-timeline .boxes .box-container .info h2 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container.about-me-timeline .boxes .box-container .info h2 {
+    font-size: 1.8rem;
   }
 }
 
@@ -1447,6 +1472,12 @@ body {
     line-height: normal;
     width: 100%;
     text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .container.about-me-timeline .boxes .box-container .info p {
+    font-size: 1.3rem;
   }
 }
 
@@ -1474,6 +1505,12 @@ body {
 @media (max-width: 1229px) {
   .container.about-me-timeline .boxes .box-container .info .year {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .container.about-me-timeline .boxes .box-container .info .year {
+    font-size: 1.3rem;
   }
 }
 
@@ -1820,23 +1857,15 @@ body {
 .modal {
   display: none;
   position: fixed;
-  /* Stay in place */
   z-index: 999999;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 .modal.active {
@@ -1865,7 +1894,18 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  /* The Close Button */
+}
+
+@media (max-width: 1229px) {
+  .modal .modal-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal .modal-content {
+    width: 100%;
+  }
 }
 
 .modal .modal-content .dynamic-content {
@@ -1880,8 +1920,23 @@ body {
           flex: 1 1 0px;
 }
 
+@media (max-width: 480px) {
+  .modal .modal-content .dynamic-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal .modal-content .dynamic-content div {
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .modal .modal-content .dynamic-content p {
+    font-size: 1.3rem;
+  }
 }
 
 .modal .modal-content .close {
