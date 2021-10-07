@@ -1792,7 +1792,7 @@ body {
   margin: 0 2rem 0 1.5rem;
   position: absolute;
   right: 0;
-  height: 25vh;
+  top: 7%;
   z-index: 999999;
 }
 
