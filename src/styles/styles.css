@@ -346,7 +346,7 @@ body {
           justify-content: center;
   text-align: center;
   position: relative;
-  height: 45vh;
+  height: 50vh;
   max-height: 475px;
   width: 100%;
   margin: 0 auto;
@@ -511,6 +511,13 @@ body {
   overflow: hidden;
   background: #4B4FA1;
   height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .contact-me {
+    height: 100%;
+  }
 }
 
 .contact-me .boxes {
@@ -527,7 +534,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   max-width: 1082px;
   position: relative;
@@ -548,7 +555,7 @@ body {
 
 @media (max-width: 480px) {
   .contact-me .boxes {
-    padding-top: 200px;
+    margin: 100px 0;
     overflow: auto;
   }
 }
@@ -1621,6 +1628,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0 15px 15px;
+}
+
+@media (max-width: 480px) {
+  .container.aboutme .aboutme--container .aboutme--text {
+    margin: 0;
+  }
 }
 
 .container.aboutme .aboutme--container .aboutme--text h2 {
