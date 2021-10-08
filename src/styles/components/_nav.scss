@@ -11,6 +11,11 @@
     transition: all .3s ease-in-out;
     font-size: $font-size-small;
     z-index: 99999;
+    height: 110px;
+
+    @media(max-width: $menu-breakingpoint) {
+        height: 60px;
+    }
 
     .menu-container {
         display: flex;
@@ -96,7 +101,9 @@
 }
 
 .menu {
-    background: $white;
+    background: rgb(243, 244, 249);
+    background: linear-gradient(75deg, rgba(243, 244, 249, 0.9402135854341737) 0%, 
+    rgba(243, 244, 249, 1) 40%);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
     height: 100%;
     padding: 45px 50px 80px;
@@ -146,7 +153,7 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
-       
+
         a {
             text-decoration: none;
             margin: 0 0.7rem;
