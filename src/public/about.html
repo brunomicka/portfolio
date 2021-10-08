@@ -96,7 +96,7 @@
 
                         <p>My name is <strong>Bruno Michaelis</strong>, born and raised in <strong>Brazil</strong> and
                             currently living in <strong>Canada</strong>. I graduated in Computer Engineering back in
-                            2012, and since there, I have never stopped studying. In 2016 I got my post-graduation
+                            2012, and since then, I have never stopped studying. In 2016 I got my post-graduation
                             certificate in Project Management and multiple Microsoft certifications in subsequent years.
 
                         <p>Everything in life does not happen by chance, and with me, it's no different.
@@ -132,13 +132,13 @@
                             the security of our code. From the business side, I was able to help the company achieve its
                             <strong>PCI</strong> and <strong>ISO 27001</strong> certification.
                         </p>
+                        <div class="year">
+                            Current - Jan. 2020
+                        </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
-                        </div>
-                        <div class="year">
-                            Current - 2020
                         </div>
                     </div>
                     <div class="read-more-details">
@@ -250,14 +250,15 @@
                             world with QWVR, working directly with Twitter.
                             As part of the stack of technologies <srong>.NET</srong> framework, with <strong>MVC, WebAPIs, and Windows
                             Services</strong>.</p>
+                            <div class="year">
+                                Dec. 2019 - Feb. 2019
+                            </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            12/2019 - 02/2019
-                        </div>
+                      
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -335,14 +336,15 @@
 
                             During my short experience at Itaú, I could implement <strong>2FA</strong> for employees to
                             access their systems using the bank app on their cellphones, helping to mitigate fraud.</p>
-                        <div class="read-more">
+                            <div class="year">
+                                Dec. 2018 - Sep. 2018
+                             </div>
+                            <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            12/2018 - 09/2018
-                        </div>
+                      
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -418,14 +420,15 @@
                             integrating all deliverables with <strong>Azure DevOps(VSTS)</strong>
                             pipelines for deployment.
                         </p>
+                        <div class="year">
+                            Aug. 2018 - Sep. 2016
+                        </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            08/2018 - 09/2016
-                        </div>
+                      
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -485,14 +488,15 @@
                             and
                             work with <strong>Azure</strong> to host our databases, websites, and blob storage.
                         </p>
+                        <div class="year">
+                            Aug. 2016 - Aug. 2014
+                        </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            08/2016 - 08/2014
-                        </div>
+                     
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -548,14 +552,15 @@
                             <strong>Angular</strong> to develop a
                             Receipt book with offline integration using localStorage.
                         </p>
+                        <div class="year">
+                            Aug. 2014 - Oct. 2012
+                        </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            08/2014 - 10/2012
-                        </div>
+                     
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -611,14 +616,15 @@
                             to C# <strong>MVC</strong>, including heavy business logic in <strong>SQL stored
                                 procedures</strong>.
                         </p>
+                        <div class="year">
+                            Sep. 2012 - Jan. 2012
+                        </div>
                         <div class="read-more">
                             <button class="button blue read-more-btn">
                                 Read More
                             </button>
                         </div>
-                        <div class="year">
-                            09/2012 - 01/2012
-                        </div>
+                    
                     </div>
                     <div class="read-more-details">
                         <div class="first-section">
@@ -671,7 +677,7 @@
                             to implement a solution using <strong>Selenium</strong> to automatize some of their internal
                             processes.</p>
                         <div class="year">
-                            12/2011 - 07/2011
+                            Dec. 2011 - Jul. 2011
                         </div>
                     </div>
                 </div>
@@ -694,13 +700,15 @@
     const btnReadMore = document.querySelectorAll('.read-more-btn')
     const modal = document.querySelector('.modal')
     const btnClose = document.querySelector('.close')
-
+ 
     btnClose.addEventListener('click', () => {
         modal.classList.remove('active')
+        document.body.style.overflow = ''
     })
 
     btnReadMore.forEach(button => {
         button.addEventListener('click', () => {
+            document.body.style.overflow = 'hidden'
             const modalContent = document.querySelector('.dynamic-content')
             modalContent.innerHTML = ''
             modalContent.innerHTML = button.parentElement.parentElement.parentElement.querySelector(

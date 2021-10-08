@@ -50,7 +50,7 @@
                 width: 100%;
 
                 @media (max-width: $mobile-breakingpoint) {
-                    text-align: justify;
+                    text-align: left;
                 }
             }
 
@@ -445,6 +445,7 @@
                         
                         @media (max-width: $mobile-breakingpoint) {
                             font-size: $font-size-xs;
+                            margin-bottom: 0;
                         }
                     }
                     .read-more {
@@ -461,6 +462,7 @@
 
                         @media (max-width: $menu-breakingpoint) {
                             font-size: $font-size-medium;
+                           
                         }
 
                         @media (max-width: $mobile-breakingpoint) {
@@ -482,7 +484,7 @@
                             font-size: $font-size-small;
                             line-height: normal;
                             width: 100%;
-                            text-align: justify;
+                            text-align: left;
                         }
                     
                         @media (max-width: $mobile-breakingpoint) {
@@ -503,15 +505,18 @@
                     }
 
                     .year {
-                        border-color: $blue;
-                        border: 2px solid;
+                        //border-color: $text;
+                        //border-top: 2px solid;
+                        //border-bottom: 2px solid;
                         color: $blue;
-                        border-radius: 2rem;
                         display: none;
-                        padding: 1rem;
+                        padding: 0;
                         text-align: center;
                         font-weight: 700;
-                        width: 100%;
+                        width: 50%;
+                        margin-bottom: 0;
+                        position: relative;
+                        padding-bottom: 5px;
 
                         @media (max-width: $menu-breakingpoint) {
                             display: block;
@@ -519,6 +524,18 @@
 
                         @media (max-width: $mobile-breakingpoint) {
                             font-size: $font-size-xs;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            height: 1px;
+                            color: $blue;
+                            background-color: $blue;
+                            width: 100px;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
                         }
                     }
                 }
