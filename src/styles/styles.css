@@ -353,6 +353,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1229px) {
+  .hero .hero--subtitle {
+    display: none;
+  }
+}
+
 .hero::before {
   content: '';
   position: absolute;
