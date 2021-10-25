@@ -1,0 +1,96 @@
+.circle {
+    background-color: $blue;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0.5rem solid;
+    display: flex;
+    padding: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 4rem;
+
+    @media (max-width: $menu-breakingpoint) {
+        margin: 3rem;
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: $white;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+        animation: fillTop 2s forwards 4s ease-in-out;
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        z-index: -1;
+        transform: translateY(-50%);
+        animation: fillLeftOdd 2s forwards 4s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        p {
+            display: none;
+        }
+
+        .date-range {
+            display: block;
+            font-size: $font-size-medium;
+        }
+    }
+
+    .date-range {
+        display: none;
+    }
+
+    p.circle--year {
+        font-size: $font-size-large;
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        width: auto;
+    }
+
+    &.white {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+            background-color: $blue_01;
+        }
+    }
+}
+
+@keyframes fillLeft {
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes fillTop {
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes fillLeftOdd {
+    100% {
+        left: 100%;
+    }
+}

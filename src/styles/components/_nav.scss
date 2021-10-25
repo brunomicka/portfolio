@@ -1,0 +1,188 @@
+.header {
+    left: 0;
+    padding: 30px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 0;
+    text-transform: lowercase;
+    width: 100%;
+    background-color: $blue;
+    transition: all .3s ease-in-out;
+    font-size: $font-size-small;
+    z-index: 99999;
+    height: 110px;
+
+    @media(max-width: $menu-breakingpoint) {
+        height: 60px;
+    }
+
+    .menu-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+
+        @media(max-width: $menu-breakingpoint) {
+            max-width: 95%;
+        }
+
+        .nav {
+            letter-spacing: 0.1rem;
+            transition: all .3s ease-in-out;
+            align-items: center;
+            display: inline-flex;
+            margin: 0 auto;
+
+            @media(max-width: $menu-breakingpoint) {
+                display: none;
+            }
+            
+            ul {
+                display: inline-block;
+                list-style-type: none;
+
+                li {
+                    cursor: pointer;
+                    display: inline-block;
+
+                    margin-right: 40px;
+
+                    a {
+                        transition: color 400ms ease;
+                    }
+                }
+
+            }
+        }
+
+        h1 {
+            display: inline-block;
+            position: absolute;
+            font-weight: 400;
+            padding: 0 20px;
+            font-size: $font-size-medium;
+
+            @media(max-width: $menu-breakingpoint) {
+                padding: 0;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            padding: 7px 15px;
+            transition: all .3s ease-in-out;
+
+            &.current,
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        // Icon Menu
+        .header-icon-menu {
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: $font-size-medium;
+            position: absolute;
+            right: 0;
+
+            @media(min-width: $menu-breakingpoint) {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu {
+    background: rgb(243, 244, 249);
+    background: linear-gradient(75deg, rgba(243, 244, 249, 0.9402135854341737) 0%, 
+    rgba(243, 244, 249, 1) 40%);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    height: 100%;
+    padding: 45px 50px 80px;
+    position: fixed;
+    right: -100%;
+    width: 30%;
+    z-index: 999999;
+    transition: right 400ms;
+    font-size: $font-size-medium;
+
+    &.active {
+        right: 0;
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .menu-nav {
+        margin-top: 100px;
+
+        ul {
+            list-style: none;
+
+            .menu-item {
+                margin: 10px 0;
+                text-align: right;
+                line-height: 4rem;
+                letter-spacing: 0.3rem;
+                font-weight: 700;
+
+                .menu-item-link {
+                    color: $orange;
+                    font-family: 'Metropolis Bold', sans-serif;
+                    font-size: 25px;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-social {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            text-decoration: none;
+            margin: 0 0.7rem;
+            color: $blue;
+        }
+    }
+}
+
+// Close
+.menu-close {
+    align-items: center;
+    background: $blue;
+    border-radius: 50%;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    height: 4.5rem;
+    justify-content: center;
+    position: absolute;
+    right: 5rem;
+    width: 4.5rem;
+
+    &:after {
+        color: $white;
+        content: 'x';
+        font-family: 'Metropolis Medium', sans-serif;
+        font-size: 25px;
+        position: absolute;
+    }
+}

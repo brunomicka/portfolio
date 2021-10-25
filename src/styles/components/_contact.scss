@@ -1,0 +1,151 @@
+.contact-me {
+    overflow: hidden;
+    background: $blue;
+    height: 100vh;
+    width: 100%;
+    @media(max-width: $mobile-breakingpoint) {
+        height: 100%;
+    }
+    .boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        margin: auto;
+        max-width: 1082px;
+        position: relative;
+        width: 100%;
+        padding: 0 1.5rem 1.5rem 0;
+        overflow: hidden;
+
+        @media(max-width: $menu-breakingpoint) {
+            flex-direction: column;
+            height: 100%;
+        }
+
+        @media(max-width: $mobile-breakingpoint) {
+            margin: 100px 0;
+            overflow: auto;
+        }
+        
+        .box {
+            width: 50%;
+            color: $white;
+
+            @media(max-width: $menu-breakingpoint) {
+                width: 80%;
+                padding-top: 3rem;
+            }
+
+            &.contact-info {
+                letter-spacing: 0.3rem;
+
+                @media(max-width: $menu-breakingpoint) {
+                    letter-spacing: 0.1rem;
+                    font-size: $font-size-small;
+                }
+
+                p {
+                    letter-spacing: 0.2rem;
+                    font-size: $font-size-small;
+                }
+
+                .contact--subheader {
+                    font-size: $font-size-medium;
+                    color: $white;
+
+                    @media(max-width: $menu-breakingpoint) {
+                        text-align: left;
+                        font-size: $font-size-small;
+                    }
+                }
+
+                .contact--headline {
+                    margin: 15px 0;
+                    font-size: 3.6rem;
+
+                    @media(max-width: $menu-breakingpoint) {
+                        font-size: $font-size-large;
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                .form-control {
+                    position: relative;
+                    margin: 20px 0 40px;
+                    width: 100%;
+
+                    label {
+                        position: absolute;
+                        top: $l-size;
+                        left: 0;
+
+                        span {
+                            display: inline-block;
+                            font-size: $font-size-small;
+                            min-width: 5px;
+                            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        }
+                    }
+
+                    input,
+                    textarea {
+                        background-color: transparent;
+                        color: $white;
+                        border: 0;
+                        border-bottom: 2px solid $white;
+                        font-size: $font-size-small;
+                        font-family: inherit;
+                        display: block;
+                        width: 100%;
+
+                        &:focus,
+                        &:valid {
+                            outline: none;
+
+                            label {
+                                span {
+                                    color: $white;
+                                    transform: translateY(-30px);
+                                }
+                            }
+                        }
+
+                        &::placeholder {
+                            color: $white;
+                        }
+                    }
+
+                    input {
+                        padding: $s-size 0;
+                    }
+
+                    textarea {
+                        top: 6rem;
+                    }
+
+                    input,
+                    textarea {
+
+                        &:focus+label span,
+                        &:valid+label span {
+                            color: $white;
+                            transform: translateY(-30px);
+                        }
+
+                        &:focus+label.textarea-label span,
+                        &:valid+label.textarea-label span {
+                            color: $white;
+                            transform: translateY(-80px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
